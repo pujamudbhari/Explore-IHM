@@ -2,16 +2,65 @@
   text-align: center;
 }
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  position: absolute;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  background: #d9d9d9;
+  width: 100%;
+  color: hsl(0, 9%, 2%);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1;
+  transition: top 0.3s ease-in-out;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 154.2%;
+}
+.header-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.header-right {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header.hidden {
+  top: -100px;
+}
+.icon {
+  margin-right: 15px;
+  color: #fff;
+  font-size: 20px;
+}
 
+.icon:first-child {
+  margin-left: 0;
+}
+
+.card {
+  padding: 4rem;
+  border: 1px solid grey;
+}
+
+.grid {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
